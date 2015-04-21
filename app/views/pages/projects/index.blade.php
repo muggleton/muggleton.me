@@ -13,7 +13,7 @@ Projects - M
 	<div class="row">
 		<div class="col-sm-4 col-xs-12">
 
-			<a href="/project/kindfile" class="project-entry" data-project="kindfile">
+			<a href="/projects/kindfile" class="project-entry" data-project="kindfile">
 				<div class="project-entry-overlay">
 					<div class="project-entry-overlay-view">View</div>
 				</div>
