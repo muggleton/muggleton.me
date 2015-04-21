@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+body
+{
+	padding-bottom: 30px;
+	font-family: "Droid serif", sans;
+	background: #f9f9f9;
+	color: #555;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
+{
+	font-weight: 600;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, .label, h1, h2, h3, h4, h5, h6, a
+{
+	font-family: "Open Sans", sans-serif;
+}
+#topbar
+{
+	background: #333;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+#topbar .navbar-header
+{
+	width: 100%;
+	text-align: center;
+
+}
+#topbar .navbar-logo
+{
+	color: #999;
+	font-family: "Droid serif";
+	border: 3px solid #999;
+	padding: 5px 10px;
+	margin: 15px;
+	display: inline-block;
+	font-size: 20px;
+}
+#topbar .navbar-logo:hover,
+#topbar .navbar-logo:focus
+{
+	color: white;
+	border-color: white;
+	background: transparent;
+	text-decoration: none;
+}
+#topbar .navbar-nav>li>a
+{
+	padding-top: 23px;
+	color: #666;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#topbar .navbar-nav>li.active>a
+{
+	color: #999;
+}
+#topbar .navbar-nav>li>a:hover,
+#topbar .navbar-nav>li>a:active
+{
+	color: white;
+	background: transparent;
+}
