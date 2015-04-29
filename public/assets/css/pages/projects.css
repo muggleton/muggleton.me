@@ -15,7 +15,7 @@
 	display: block;
 	margin-top: 100%;
 }
-.project-entry-overlay:before
+.project-entry .project-entry-overlay:before
 {
 	content: '';
 	display: inline-block;
@@ -31,7 +31,7 @@
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background: rgba(0,0,0,0.8);
+	background: rgba(255,255,255,0.8);
 	text-align: center;
 	
 	visibility: hidden;
@@ -50,19 +50,20 @@
 {
 	display: inline-block;
 	vertical-align: middle;
-	color: white;
-	font-size: 14px;
-	border: 1px solid white;
-	padding: 10px 20px;
-	border-radius: 20px;
-	font-weight: 300;
+	color: #999;
+	font-size: 18px;
+}
+.project-entry .project-entry-overlay .project-entry-overlay-view:hover,
+.project-entry .project-entry-overlay .project-entry-overlay-view:active
+{
+	color: #fd9226;
 }
 .project-entry[data-project="kindfile"]
 {
 	background-color: #566ba3;
 	width: 100%;
 
-	background-image: url('/assets/img/project/kf.png');
+	background-image: url('/assets/img/projects/kf.png');
 	background-repeat: no-repeat;
 	background-size: 200px;
 	background-position: center center;

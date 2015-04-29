@@ -1,0 +1,23 @@
+#map
+{
+	min-height: 250px;
+}
+.contact-container h3 
+{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+.contact-container .help-block
+{
+	color: #999;
+	font-size: 12px;
+}
+/** Hide Google Watermarking on Maps **/
+a[href^="http://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span {
+	display:none;
+}
+.gmnoprint div {
+	background:none !important;
+}
