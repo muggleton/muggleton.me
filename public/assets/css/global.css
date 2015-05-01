@@ -111,6 +111,21 @@ body
 	width: 100%;
 	text-align: center;
 	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.cover .cover-content
+{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.cover .cover-content .cover-title
+{
+	color: white;
+	margin: 0;
+	padding: 0;
 }
 .title
 {

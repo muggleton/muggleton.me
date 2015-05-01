@@ -2,12 +2,6 @@
 {
 	background-color: #566ba3;
 }
-.cover .cover-content
-{
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-}
 .cover .cover-content .cover-logo
 {
 	max-height: 150px;

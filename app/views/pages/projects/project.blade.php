@@ -11,7 +11,7 @@ Kindfile - M
 @endsection
 @section('content')
 <div class="cover">
-	<div class="cover-content">
+<div class="cover-content">
 		<img class="cover-logo" src="/assets/img/projects/kf.png">
 	</div>
 </div>

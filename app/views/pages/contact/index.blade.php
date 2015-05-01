@@ -10,7 +10,13 @@
 Contact - M
 @endsection
 @section('content')
-<div class="cover" id="map"></div>
+<div class="cover">
+	<div id="map"></div>
+	<div class="cover-content">
+		<h1 class="cover-title">Contact me</h1>
+	</div>
+
+</div>
 <div class="container contact-container">
 	<div class="row">
 		<div class="col-sm-6">
@@ -30,7 +36,7 @@ Contact - M
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<h3><i class="fa fa-bed"></i> Feeling Lazy?</h3>
+			<h3><i class="fa fa-bed"></i> Feeling lazy?</h3>
 			{{Form::open();}}
 			<div class="form-group">
 				<label for="name">Name</label>
