@@ -20,6 +20,10 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li {{ Request::is('projects*') ? ' class="active"' : '' }}><a href="/projects">Projects</a></li>
 				<li {{ Request::is('contact*') ? ' class="active"' : '' }}><a href="/contact">Contact</a></li>
+				@if(!Auth::guest())
+				<li><a href="/contact/messages">Messages ({{{Message::whereRead(false)->count()}}})</a></li>
+				<li><a href="/admin/logout">Logout</a></li>
+				@endif
 			</ul>
 			<ul class="visible-xs nav navbar-nav navbar-right navbar-social">
 				<li><a href="http://stackoverflow.com/users/893541/muggles" target="new"><i class="fa fa-stack-overflow"></i></a></li>

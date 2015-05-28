@@ -21,10 +21,38 @@
 	margin-top: 50px;
 	margin-bottom: 20px;
 }
-.contact-container .help-block
+.contact-container .contact-link
 {
+	margin: 0 0 10px;
+	display: block;
+	color: #666;
+	word-break: break-all;
+	text-align: center;
+}
+.contact-container .contact-link:hover,
+.contact-container .contact-link:focus
+{
+	color: #fd9226;
+	text-decoration: none;
+}
+.contact-container .or-container
+{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.contact-container .or-container h3
+{
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	display: inline-block;
 	color: #999;
-	font-size: 12px;
+	padding: 5px 2px;
+}
+/** Give some margin top the success message **/
+.alert-success
+{
+	margin-top: 40px;
+	text-align: center;
 }
 /** Hide Google Watermarking on Maps **/
 a[href^="http://maps.google.com/maps"]{display:none !important}

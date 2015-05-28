@@ -19,43 +19,54 @@ Contact - M
 </div>
 <div class="container contact-container">
 	<div class="row">
-		<div class="col-sm-6">
-			<div class="row">
-				<div class="col-sm-12">
-					<h3><i class="fa fa-envelope-o"></i> Email</h3>
-					<p><a href="#">david@muggleton.me</a></p>
-				</div>
-				<div class="col-sm-12">
-					<h3><i class="fa fa-stack-overflow"></i> Stack Overflow</h3>
-					<p>http://stackoverflow.com/users/893541/muggles</p>
-				</div>
-				<div class="col-sm-12">
-					<h3><i class="fa fa-github"></i> Github</h3>
-					<p>https://github.com/muggleton</p>
-				</div>
-			</div>
+		<div class="col-sm-4 col-xs-12">
+			<h3><a class="contact-link" href="mailto:david@muggleton.me" target="_top"><i class="fa fa-envelope-o"></i> Email</a></h3>
+
 		</div>
-		<div class="col-sm-6">
-			<h3><i class="fa fa-bed"></i> Feeling lazy?</h3>
+		<div class="col-sm-4  col-xs-12">
+			<h3><a class="contact-link" href="http://stackoverflow.com/users/893541/muggles" target="new"><i class="fa fa-stack-overflow"></i> Stack Overflow</a></h3>
+		</div>
+		<div class="col-sm-4  col-xs-12">
+			<h3><a class="contact-link" href="https://github.com/muggleton" target="new"><i class="fa fa-github"></i> Github</a></h3>
+		</div>
+	</div>
+	<div class="row">
+		@if(Session::has('success'))
+		<div class="col-xs-12">
+			<div class="alert alert-success">Your message has been successfully sent, cheers.</div>
+		</div>
+		@else
+		<div class="col-xs-12 or-container">
+			<h3>OR</h3>
+		</div>
+		<div class="col-sm-6 col-xs-12">
 			{{Form::open();}}
-			<div class="form-group">
+
+			<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
 				<label for="name">Name</label>
-				{{Form::text('name', null, ['id' => 'name', 'class' => 'form-control', 'placeholder' => 'Emilia Clarke']);}}
-				<span class="help-block">Required.</span>
+				{{Form::text('name', null, ['id' => 'name', 'class' => 'form-control input-lg', 'placeholder' => 'Emilia Clarke']);}}
+				<p class="help-block">{{ $errors->has('name') ? $errors->first('name') : '' }}</p>
 			</div>
-			<div class="form-group">
-				<label for="email">Email</label>
-				{{Form::email('email', null, ['id' => 'email', 'class' => 'form-control', 'placeholder' => 'emiliaclarke@gmail.com']);}}
-				<span class="help-block">Required.</span>
-			</div>
-			<div class="form-group">
-				<label for="message">Message</label>
-				{{Form::textarea('message', null, ['id' => 'message', 'class' => 'form-control', 'placeholder' => 'Hunny I haven\'t heard from you in a while, was it something I said?']);}}
-				<span class="help-block">Definitely required.</span>
-			</div>
-			<button type="submit" class="btn btn-block btn-default">Send</button>
-			{{Form::close();}}
 		</div>
+		<div class="col-sm-6 col-xs-12">
+			<div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+				<label for="email">Email</label>
+				{{Form::email('email', null, ['id' => 'email', 'class' => 'form-control input-lg', 'placeholder' => 'emiliaclarke@gmail.com']);}}
+				<p class="help-block">{{ $errors->has('email') ? $errors->first('email') : '' }}</p>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
+				<label for="message">Message</label>
+				{{Form::textarea('message', null, ['id' => 'message', 'class' => 'form-control input-lg', 'placeholder' => 'Hunny I haven\'t heard from you in a while, was it something I said?']);}}
+				<p class="help-block">{{ $errors->has('message') ? $errors->first('message') : '' }}</p>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			{{Form::submit('Send', ['class' => 'btn-trans'])}}
+		</div>
+		{{Form::close();}}
+		@endif
 	</div>
 </div>
 @endsection

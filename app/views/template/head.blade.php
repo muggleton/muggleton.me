@@ -9,6 +9,11 @@
 
   {{HTML::style('/assets/css/vendor/bootstrap/bootstrap.min.css')}}
   {{HTML::style('/assets/css/global.css')}}
+
+  @if(!Auth::guest())
+  {{HTML::style('/assets/css/pages/admin.css')}}
+  @endif
+  
   {{HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')}}
   @yield('styles')
 

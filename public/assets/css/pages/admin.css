@@ -1,0 +1,29 @@
+/* ADMIN LOGIN */
+h1.title
+{
+	margin-top: 30px;
+	margin-bottom: 50px;
+	display: block;
+	text-align: center;
+}
+
+#topbar
+{
+	border-bottom: 1px solid #eee;
+}
+
+.admin-options-container
+{
+	padding: 15px 0;
+	text-align: center;
+}
+
+/** Project Form **/
+#project-form
+{
+	margin-top: 20px;
+}
+#project-form .screenshot-input, #project-form .technology-input
+{
+	margin-bottom: 10px;
+}

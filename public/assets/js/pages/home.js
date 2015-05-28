@@ -1,6 +1,6 @@
 // Need to add some catching on request
 // with local storage
-
+/**
 $(document).ready(function(){
 	// Unsplash RSS feed url
 	var unsplash_url = 'https://unsplash.com/rss';
@@ -24,3 +24,4 @@ function loadImage(data)
 
 			}
 		}
+		**/

@@ -7,25 +7,34 @@
 
 @endsection
 @section('title')
-Kindfile - M
+{{{$project->title}}} - M
 @endsection
 @section('content')
-<div class="cover">
-<div class="cover-content">
-		<img class="cover-logo" src="/assets/img/projects/kf.png">
+<div class="cover" data-color="{{$project->colour}}">
+	<div class="cover-content">
+		<img class="cover-logo" src="{{$project->logo_url}}">
 	</div>
 </div>
 <div class="container project-container">
+	@if(!Auth::guest())
 	<div class="row">
+		<div class="col-xs-12 admin-options-container">
+			<a class="btn-round" href="/projects/edit/{{$project->name}}">Edit</a>
+			<a class="btn-round btn-delete-project" href="/projects/delete/{{$project->name}}">Delete</a>
+		</div>
+	</div>
+	@endif
+	<div class="row">
+
 		<div class="col-sm-4 col-xs-12">
 			<h3>Screenshots</h3>
 			<a class="lightbox" href="#_" id="lightbox">
 				<img id="lightbox-image" src="">
 			</a>
 			<div class="row">
+				@foreach($project->screenshots as $screenshot)
 				<div class="col-sm-6 col-xs-4">
-					
-					<a class="project-screenshot" data-image="1" href="#lightbox">
+					<a class="project-screenshot" data-image="{{{$screenshot->url}}}" href="#lightbox">
 						<div class="project-screenshot-overlay">
 							<div class="project-screenshot-overlay-view">
 								Enlarge
@@ -33,32 +42,27 @@ Kindfile - M
 						</div>
 					</a>
 				</div>
-				<div class="col-sm-6 col-xs-4">
-					<a class="project-screenshot" data-image="1"></a>
-				</div>
-				<div class="col-sm-6 col-xs-4">
-					<a class="project-screenshot" data-image="1"></a>
-				</div>
-				<div class="col-sm-6 col-xs-4">
-					<a class="project-screenshot" data-image="1"></a>
-				</div>
-
+				@endforeach
 			</div>
 		</div>
 		<div class="col-sm-8 col-xs-12">
 			<h3>About</h3>
 
 			<p>
-				<a href="http://www.kindfile.com" target="new" class="project-link">http://www.kindfile.com/ <i class="fa fa-external-link fa-small"></i></a>
-				I wanted to recreate the PPD (pay per download) modal, with a responsive, easy to use and simple application.</p>
+				@if($project->url)
+				<a href="{{{$project->url}}}" target="new" class="project-link">{{{$project->url}}} <i class="fa fa-external-link fa-small"></i></a>
+				@endif
 
-				<h3>Technologies</h3>
-				<ul class="project-technologies">
-					<li><a href="http://wiki.nginx.org/Main" target="new">nginx</a> - Incredibly fast, good documentation, rich in modules which for this work allowed for file uploads, authentication requests, and downloads without having to touch Laravel.</li>
-					<li><strong>Bootstrap</strong> - Provided the back bone for responsive layouts. Allowed compatibility with older browsers. Ensured a coherent design throughout the site. </li>
-					<li><strong>jQuery</strong> - Allowed for manipulating the DOM elements with wide-spread browser support, templating and performing ajax requests with an easy to follow syntax. As well as a huge library of plugins.</li>
-				</ul>
-			</div>
+				{{$project->about}}
+			</p>
+
+			<h3>Technologies</h3>
+			<ul class="project-technologies">
+				@foreach($project->technologies as $technology)
+				<li>{{$technology->content}}</li>
+				@endforeach
+			</ul>
 		</div>
 	</div>
-	@endsection
+</div>
+@endsection

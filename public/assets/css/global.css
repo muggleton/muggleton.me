@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 body
 {
-	padding-bottom: 30px;
+	padding-bottom: 40px;
 	font-family: "Droid serif", sans;
 	background: white;
 	color: #555;
@@ -11,17 +11,38 @@ body
 {
 	font-weight: 600;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, .label, h1, h2, h3, h4, h5, h6, a
+/** Sans-serif font **/
+.h1, 
+.h2, 
+.h3, 
+.h4, 
+.h5, 
+.h6, 
+.label, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+a,
+.help-block, 
+.alert,
+label, 
+.btn
+{
+	font-family: "Open sans", sans-serif;
+}
 {
 	font-family: "Open Sans", sans-serif;
 }
+/** Topbar **/
 #topbar
 {
 	background: white;
 	border-radius: 0;
 	margin-bottom: 0;
 	border: none;
-	border-bottom: 1px solid #eee;
 }
 #topbar .navbar-header
 {
@@ -98,6 +119,7 @@ body
 {
 	background: #fd9226;
 }
+/** Cover **/
 .cover:before
 {
 	content: '';
@@ -127,25 +149,107 @@ body
 	margin: 0;
 	padding: 0;
 }
-.title
-{
-	width: 100%;
-	text-align: center;
-	margin: 30px 0 30px;
-}
+/** Form elements **/
 label
 {
 	font-weight: 600;
 }
 label, .btn
 {
+	font-size: 16px;
+}
+.btn-round
+{
+	border: 2px solid #eee;
+	width: auto;
+	padding: 10px 20px;
+	border-radius: 30px;
+	color: #999;
+	margin-bottom: 15px;
+	background: transparent;
+	display: inline-block;
+}
+.btn-round:hover,
+.btn-round:focus
+{
+	text-decoration: none;
+	border-color: #fd9226;
+	color: #fd9226;
+}
+.btn-trans
+{
+	background: transparent;
+	border: transparent;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
 	font-family: "Open Sans", sans-serif;
 }
+.btn-trans.btn-space
+{
+	margin-bottom: 15px;
+}
+.btn-trans:hover,
+.btn-trans:active
+{
+	color: #fd9226;
+	text-decoration: none;
+}
+.btn-trans:focus
+{
+	outline: none;
+}
+.form-control
+{
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	padding: 10px;
+}
+.form-control:focus
+{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-color: #fd9226;
+}
+.has-error .form-control
+{
+	border-color: #EF5350;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.has-error .form-control:focus {
+	border-color: #F44336;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label
+{
+	color: #E57373;
+}
+.input-lg
+{
+	font-size: 16px;
+}
+.input-group-addon
+{
+	border-radius: 0;
+}
+/** Alerts **/
+.alert 
+{
+	border: none;
+	border-radius: 0;
+}
 @media(max-width: 768px){
+	/** Cover **/
 	.cover
 	{
 		height: 200px;
 	}
+	/** Topbar **/
 	#topbar .navbar-logo
 	{
 		margin: 10px 15px;

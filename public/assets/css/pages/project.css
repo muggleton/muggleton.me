@@ -1,7 +1,3 @@
-.cover
-{
-	background-color: #566ba3;
-}
 .cover .cover-content .cover-logo
 {
 	max-height: 150px;
@@ -54,7 +50,7 @@ a.project-screenshot
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background: rgba(255,255,255,0.8);
+	background: rgba(0,0,0,0.8);
 	text-align: center;
 	
 	visibility: hidden;
@@ -73,13 +69,8 @@ a.project-screenshot
 {
 	display: inline-block;
 	vertical-align: middle;
-	color: #999;
 	font-size: 16px;
-}
-.project-screenshot .project-screenshot-overlay .project-screenshot-overlay-view:hover,
-.project-screenshot .project-screenshot-overlay .project-screenshot-overlay-view:focus
-{
-	color: #fd9226;
+	color: white;
 }
 
 .project-technologies
