@@ -19,9 +19,9 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li {{ Request::is('projects*') ? ' class="active"' : '' }}><a href="/projects">Projects</a></li>
-				<li {{ Request::is('contact*') ? ' class="active"' : '' }}><a href="/contact">Contact</a></li>
+				<li {{ Request::is('contact') ? ' class="active"' : '' }}><a href="/contact">Contact</a></li>
 				@if(!Auth::guest())
-				<li><a href="/contact/messages">Messages ({{{Message::whereRead(false)->count()}}})</a></li>
+				<li {{ Request::is('contact/*') ? ' class="active"' : '' }}><a  href="/contact/messages">Messages ({{{Message::whereRead(false)->count()}}})</a></li>
 				<li><a href="/admin/logout">Logout</a></li>
 				@endif
 			</ul>

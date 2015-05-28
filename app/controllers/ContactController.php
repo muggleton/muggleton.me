@@ -7,9 +7,23 @@ class ContactController extends BaseController
 		$this->beforeFilter('auth', array('except' => ['getIndex', 'postIndex']));
 	}
 
-	public function getIndex()
+	public function getIndex($message = 0)
 	{
-		return View::make('pages.contact.index');
+		// Check if we are viewing a message
+		if($message == 0)
+		{
+			// We aren't viewing a message
+			// display an index of messages
+			return View::make('pages.contact.index');
+		}
+
+		// Otherwise
+		// dispay the message
+		$message = Message::findOrDie($message);
+		// Update as read
+		$message->update(['read' => true]);
+		// Display view
+		return View::make('pages.contact.message');
 	}
 
 	public function postIndex()
@@ -32,7 +46,10 @@ class ContactController extends BaseController
 
 	public function getMessages()
 	{
-		return 'Messages page here...';
+		$messages = Message::select('name', 'email', 'created_at', 'read')->orderBy('read', 'DESC')->paginate(10);
+
+		return View::make('pages.contact.messages', ['messages' => $messages]);
+
 	}
 
 
