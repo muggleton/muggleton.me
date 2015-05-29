@@ -7,23 +7,9 @@ class ContactController extends BaseController
 		$this->beforeFilter('auth', array('except' => ['getIndex', 'postIndex']));
 	}
 
-	public function getIndex($message = 0)
+	public function getIndex()
 	{
-		// Check if we are viewing a message
-		if($message == 0)
-		{
-			// We aren't viewing a message
-			// display an index of messages
-			return View::make('pages.contact.index');
-		}
-
-		// Otherwise
-		// dispay the message
-		$message = Message::findOrDie($message);
-		// Update as read
-		$message->update(['read' => true]);
-		// Display view
-		return View::make('pages.contact.message');
+		return View::make('pages.contact.index');
 	}
 
 	public function postIndex()
@@ -46,11 +32,21 @@ class ContactController extends BaseController
 
 	public function getMessages()
 	{
-		$messages = Message::select('name', 'email', 'created_at', 'read')->orderBy('read', 'DESC')->paginate(10);
-
+		$messages = Message::select('id', 'name', 'email', 'created_at', 'read')->orderBy('read', 'ASC')->paginate(10);
 		return View::make('pages.contact.messages', ['messages' => $messages]);
-
 	}
 
+	public function getMessage($id)
+	{
+		// Find the message
+		$message = Message::findOrFail($id);
+		// Update as read
+		$message->read = true;
+		// Save changed
+		$message->save();
+
+		// Display view
+		return View::make('pages.contact.message', ['message' => $message]);
+	}
 
 }

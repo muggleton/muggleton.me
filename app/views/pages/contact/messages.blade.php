@@ -22,10 +22,10 @@ Messages - M
 			@foreach($messages as $message)
 			<tr>
 				<th scope="row"><i class="fa {{$message->read ? 'fa-envelope-o' : 'fa-envelope'}}"></i></th>
-				<td>{{$message->name}}</td>
-				<td>{{$message->email}}</td>
-				<td>{{$message->created_at}}</td>
-				<td><a href="/contact/messages/1">View</a></td>
+				<td>{{{$message->name}}}</td>
+				<td>{{{$message->email}}}</td>
+				<td>{{{$message->created_at}}}</td>
+				<td><a href="/contact/message/{{$message->id}}">View</a></td>
 			</tr>
 			@endforeach
 		</tbody>

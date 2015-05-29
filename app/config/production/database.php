@@ -1,4 +1,7 @@
 <?php
+// Require private configuration so cannot be viewed in public respitory
+require_once('/var/www/muggleton.me/private.php');
+
 return array(
 
 	/*
@@ -22,9 +25,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'muggleton',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => $private['mysql']['database'],
+			'username'  => $private['mysql']['username'],
+			'password'  => $private['mysql']['password'],
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
