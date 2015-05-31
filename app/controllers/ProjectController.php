@@ -2,7 +2,7 @@
 class ProjectController extends BaseController
 {
 	// Protect all the routes apart from index and project
-	public function __construt()
+	public function __construct()
 	{
 		$this->beforeFilter('auth', array('except' => ['getIndex', 'getView']));
 	}
