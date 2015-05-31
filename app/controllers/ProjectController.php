@@ -4,8 +4,9 @@ class ProjectController extends BaseController
 	// Protect all the routes apart from index and project
 	public function __construct()
 	{
-		$this->beforeFilter('auth', array('except' => ['getIndex', 'getView']));
+		$this->beforeFilter('auth', ['except' => ['getIndex', 'getView']]);
 	}
+
 	public function getIndex()
 	{
 		$projects = Project::orderBy('completion', 'DESC')->get();
