@@ -1,7 +1,5 @@
-
 <nav class="navbar @if(isset($fixed_top))navbar-fixed-top @endif" id="topbar">
 	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
