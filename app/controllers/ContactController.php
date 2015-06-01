@@ -20,7 +20,7 @@ class ContactController extends BaseController
 		if(!$message->validate(Input::all()))
 		{
 			// Errors occured
-			return Redirect::to('/contact')->withInput()->withErrors($message->errors());
+			return Redirect::to('/contact#contact-form')->withInput()->withErrors($message->errors());
 		}
 
 		// No errors occured...save message

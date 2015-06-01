@@ -40,7 +40,7 @@ Contact - M
 			<h3>OR</h3>
 		</div>
 		<div class="col-sm-6 col-xs-12">
-			{{Form::open();}}
+			{{Form::open(['id' => 'contact-form']);}}
 
 			<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
 				<label for="name">Name</label>

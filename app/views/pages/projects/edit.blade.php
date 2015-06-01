@@ -1,6 +1,6 @@
 @extends('template.base')
 @section('title')
-New Project - M
+Edit "{{{$project->title}}}" - M
 @endsection
 @section('scripts')
 {{HTML::script('/assets/js/vendor/bootstrap/bootstrap-datepicker.min.js')}}
