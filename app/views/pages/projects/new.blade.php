@@ -59,10 +59,10 @@ New Project - M
 				<label for="email">Technologies</label>
 				@if(Input::old('technology'))
 				@foreach(Input::old('technology') as $key => $technology)
-				{{Form::text('technology[' . $key . ']', $technology, ['class' => 'form-control input-lg technology-input', 'placeholder' => 'nginx etc']);}}
+				{{Form::textarea('technology[' . $key . ']', $technology, ['class' => 'form-control input-lg technology-input', 'placeholder' => 'nginx etc']);}}
 				@endforeach
 				@else
-				{{Form::text('technology[0]', null, ['class' => 'form-control input-lg technology-input', 'placeholder' => 'nginx']);}}
+				{{Form::textarea('technology[0]', null, ['class' => 'form-control input-lg technology-input', 'placeholder' => 'nginx']);}}
 				@endif
 				<a href="#" class="btn-round btn-add-input">Add</a>
 			</div>

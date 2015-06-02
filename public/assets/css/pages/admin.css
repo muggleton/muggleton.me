@@ -27,3 +27,7 @@ h1.title
 {
 	margin-bottom: 10px;
 }
+#project-form .technology-input
+{
+	height: 50px;
+}

@@ -13,7 +13,7 @@ $(document).ready(function(){
 		e.preventDefault(); 
 
 		// Find the previous input
-		var previous_input = $(this).prev('input');
+		var previous_input = $(this).prev('input,textarea');
 
 		// Check whether input is technology or screenshot
 		if(previous_input.hasClass('technology-input'))
@@ -22,7 +22,7 @@ $(document).ready(function(){
 			// Increment index count
 			technology_input_index++;
 			// Insert new input before button
-			$('<input class="form-control input-lg technology-input" placeholder="nginx" name="technology[' + technology_input_index + ']" type="text">').insertAfter(previous_input);
+			$('<textarea class="form-control input-lg technology-input" placeholder="nginx" name="technology[' + technology_input_index + ']"></textarea>').insertAfter(previous_input);
 		}
 		else
 		{

@@ -59,11 +59,11 @@ Edit "{{{$project->title}}}" - M
 				<label for="email">Technologies</label>
 				@if(Input::old('technology'))
 				@foreach(Input::old('technology') as $key => $technology)
-				{{Form::text('technology[' . $key . ']', $technology, ['class' => 'form-control input-lg technology-input', 'placeholder' => 'nginx etc']);}}
+				{{Form::textarea('technology[' . $key . ']', $technology, ['class' => 'form-control input-lg technology-input', 'placeholder' => 'nginx etc']);}}
 				@endforeach
 				@else
 				@foreach($project->technologies as $key => $technology)
-				{{Form::text('technology[' . $key . ']', $technology->content, ['class' => 'form-control input-lg technology-input', 'placeholder' => 'nginx etc']);}}
+				{{Form::textarea('technology[' . $key . ']', $technology->content, ['class' => 'form-control input-lg technology-input', 'placeholder' => 'nginx etc']);}}
 				@endforeach
 				@endif
 				<a href="#" class="btn-round btn-add-input">Add</a>
