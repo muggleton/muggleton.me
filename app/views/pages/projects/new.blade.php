@@ -91,7 +91,7 @@ New Project - M
 		<div class="col-sm-6 col-xs-12">
 			<div class="form-group">
 				<label for="email">Date</label>
-				{{Form::text('completion', null, ['class' => 'form-control input-lg', 'placeholder' => '21/08/2012', 'data-provide' => 'datepicker-inline','data-date-format' => 'dd/mm/yyyy']);}}
+				{{Form::text('completion', null, ['class' => 'form-control input-lg', 'placeholder' => '21/08/2012', 'data-provide' => 'datepicker-inline','data-date-format' => 'yyyy-mm-dd']);}}
 			</div>
 		</div>
 
