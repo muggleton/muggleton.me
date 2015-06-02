@@ -10,7 +10,7 @@ M
 @endsection
 @section('content')
 <div class="center-text-container">
-	<!-- Lorem ipsum and a big photo until I can find something better to put here...? How artistic. -->
+	<div class="center-text">Watch this space...</div>
 </div>
 
 @endsection

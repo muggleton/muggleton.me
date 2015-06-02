@@ -213,18 +213,18 @@ label, .btn
 }
 .has-error .form-control
 {
-	border-color: #EF5350;
+	border-color: #666;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 }
 .has-error .form-control:focus {
-	border-color: #F44336;
+	border-color: #666;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label
 {
-	color: #E57373;
+	color: #666;
 }
 .input-lg
 {
