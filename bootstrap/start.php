@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('muggleton-local'),
+	'local' => 	['muggleton-local'],
 	'production' => ['muggleton-www-production']
 
 	));
