@@ -31,3 +31,8 @@ h1.title
 {
 	height: 50px;
 }
+/* Spacing from last input */
+#project-form .btn-trans
+{
+	margin-top: 20px;
+}
