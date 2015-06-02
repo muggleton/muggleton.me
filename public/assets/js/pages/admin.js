@@ -12,7 +12,7 @@ $(document).ready(function(){
 		// Prevent default behaviour for links
 		e.preventDefault(); 
 
-		// Find the previous input
+		// Find the previous input or textarea
 		var previous_input = $(this).prev('input,textarea');
 
 		// Check whether input is technology or screenshot
