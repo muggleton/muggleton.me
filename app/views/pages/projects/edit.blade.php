@@ -7,6 +7,7 @@ Edit "{{{$project->title}}}" - M
 @endsection
 @section('styles')
 {{HTML::style('/assets/css/vendor/bootstrap/bootstrap-datepicker.min.css')}}
+@endsection
 @section('content')
 <div class="container new-project-container">
 	<h1 class="title">Edit "{{{$project->title}}}"</h1>

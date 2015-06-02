@@ -7,6 +7,7 @@ New Project - M
 @endsection
 @section('styles')
 {{HTML::style('/assets/css/vendor/bootstrap/bootstrap-datepicker.min.css')}}
+@endsection
 @section('content')
 <div class="container new-project-container">
 	<h1 class="title">Add a new project</h1>
