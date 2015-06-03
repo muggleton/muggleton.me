@@ -54,7 +54,7 @@ App::missing(function($exception)
 	if (App::environment('production'))
 	{
     	// The environment is in production
-		return Response::view('pages.errors.404', array(), 404);
+		return Response::view('pages.error.404', array(), 404);
 	}
 });
 
