@@ -2,9 +2,6 @@
 @section('styles')
 {{HTML::style('/assets/css/pages/projects.css')}}
 @endsection
-@section('scripts')
-{{HTML::script('/assets/js/pages/projects.js')}}
-@endsection
 @section('title')
 Projects - M
 @endsection
