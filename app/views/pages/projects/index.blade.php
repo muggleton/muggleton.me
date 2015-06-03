@@ -25,7 +25,11 @@ Projects - M
 			<div class="col-sm-4 col-xs-12">
 				<a href="/projects/{{{$project->name}}}" class="project-entry" data-color="{{$project->colour}}" data-image="{{$project->logo_url}}">
 					<div class="project-entry-overlay">
-						<div class="project-entry-overlay-view">View</div>
+						<div class="project-entry-overlay-view">
+							<div class="project-view">View</div>
+							<div class="project-title">{{$project->title}}</div>
+
+						</div>
 					</div>
 				</a>
 			</div>

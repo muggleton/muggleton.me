@@ -62,6 +62,15 @@
 	font-size: 18px;
 	color: white;
 }
+.project-entry .project-entry-overlay .project-entry-overlay-view .project-title
+{
+	padding-top: 3px;
+}
+.project-entry .project-entry-overlay .project-entry-overlay-view .project-view
+{
+	font-size: 14px;
+	color: #aaa;
+}
 .project-entry
 {
 	width: 100%;
