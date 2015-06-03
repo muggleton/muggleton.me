@@ -18,7 +18,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/models',
 	app_path().'/database/seeds',
 	
-));
+	));
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +33,7 @@ ClassLoader::addDirectories(array(
 
 Log::useFiles(storage_path().'/logs/laravel.log');
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Error Handler
@@ -45,6 +46,17 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 | shown, which includes a detailed stack trace during debug.
 |
 */
+
+// 404 Page
+App::missing(function($exception)
+{
+	// Check we are in production
+	if (App::environment('production'))
+	{
+    	// The environment is in production
+		return Response::view('pages.errors.404', array(), 404);
+	}
+});
 
 App::error(function(Exception $exception, $code)
 {
