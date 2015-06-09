@@ -15,6 +15,8 @@
   @endif
   
   {{HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')}}
+  {{HTML::style('//fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,600,700')}}
+
   @yield('styles')
 
     <!--[if lt IE 9]>
