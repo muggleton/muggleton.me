@@ -7,7 +7,7 @@ body
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background-image: url('/assets/img/home/1.jpg');
+	/**background-image: url('/assets/img/home/1.jpg');**/
 }
 body,html
 {
